@@ -8,6 +8,6 @@ getWithHeader("https://mrt.ulbi.ac.id/notif/ux/getdatauser","login",getCookie("l
 
 function responseFunction(result){
     setInner("content","Selamat Datang "+result.nama);
-    redirect("report");
+    redirect("/report");
     console.log(result);
 }
