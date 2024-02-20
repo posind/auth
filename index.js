@@ -9,4 +9,5 @@ getWithHeader("https://mrt.ulbi.ac.id/notif/ux/getdatauser","login",log,response
 
 function responseFunction(result){
     setInner("content",result);
+    console.log(result);
 }
