@@ -10,6 +10,6 @@ wauthparam.redirect="#";
 //delete cookies session and call whatsauth qrController
 //deleteCookie(wauthparam.tokencookiename);
 
-export default function() { 
+export function wAuth() { 
     qrController(wauthparam);
 }
