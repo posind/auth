@@ -7,10 +7,15 @@ if (getCookie("login")===""){
     redirect("/");
 }
 
-getWithHeader("https://mrt.ulbi.ac.id/notif/ux/getdatauser","login",getCookie("login"),responseFunction)
+getWithHeader("https://api.do.my.id/data/user","login",getCookie("login"),responseFunction)
 
 function responseFunction(result){
-    setInner("content","Selamat Datang "+result.nama);
-    redirect("/report");
+    if (result.phonenumber===""){
+        var pesan="Silahkan lakukan pendaftaran terlebih dahulu";
+    }else{
+        pesan="Selamat datang "+result.nama;
+    }
+    setInner("content",pesan);
+    //redirect("/report");
     console.log(result);
 }
