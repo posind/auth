@@ -11,7 +11,7 @@ getJSON("https://api.do.my.id/data/user","login",getCookie("login"),responseFunc
 
 function responseFunction(result){
     if (result.status === 404){
-        setInner("content","Silahkan lakukan pendaftaran terlebih dahulu "+result.data.nama);
+        setInner("content","Silahkan lakukan pendaftaran terlebih dahulu "+result.data.name);
         //redirect("/signup");
     }else{
         setInner("content","Selamat datang "+result.data.nama);
