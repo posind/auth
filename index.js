@@ -15,6 +15,7 @@ function responseFunction(result){
         redirect("/signup");
     }else{
         setInner("content","Selamat datang "+result.data.name);
+        redirect("/dashboard");
     }
     console.log(result);
 }
