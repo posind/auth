@@ -14,7 +14,7 @@ function responseFunction(result){
         setInner("content","Silahkan lakukan pendaftaran terlebih dahulu "+result.data.name);
         //redirect("/signup");
     }else{
-        setInner("content","Selamat datang "+result.data.nama);
+        setInner("content","Selamat datang "+result.data.name);
     }
     console.log(result);
 }
