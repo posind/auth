@@ -7,12 +7,12 @@ if (getCookie("login")===""){
     redirect("/");
 }
 
-getJSON("https://api.do.my.id/data/user","login",getCookie("login"),responseFunction)
+getJSON("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/user","login",getCookie("login"),responseFunction)
 
 function responseFunction(result){
     if (result.status === 404){
         setInner("content","Silahkan lakukan pendaftaran terlebih dahulu "+result.data.name);
-        redirect("/signup");
+        redirect("https://pamongdesa.kemendagri.go.id/");
     }else{
         setInner("content","Selamat datang "+result.data.name);
         redirect("/dashboard");
