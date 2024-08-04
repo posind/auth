@@ -15,7 +15,7 @@ function responseFunction(result){
         redirect("https://pamongdesa.kemendagri.go.id/");
     }else{
         setInner("content","Selamat datang "+result.data.name);
-        redirect("/dashboard");
+        redirect("/pdboard");
     }
     console.log(result);
 }
