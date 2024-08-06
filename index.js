@@ -12,10 +12,10 @@ getJSON("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/user
 function responseFunction(result){
     if (result.status === 200){
         setInner("content","Selamat datang "+result.data.name);
-        //redirect("/pdboard");
+        redirect("/pdboard");
     }else{
         setInner("content","Silahkan lakukan chat ke bot helpdesk pemilihan operator");
-        //redirect("https://wa.me/6285157979759?text=bantuan+operator");
+        redirect("https://wa.me/6285157979759?text=bantuan+operator");
     }
     console.log(result);
 }
