@@ -14,8 +14,8 @@ function responseFunction(result){
         setInner("content","Selamat datang "+result.data.name);
         redirect("/pdboard");
     }else{
-        setInner("content","Silahkan lakukan pendaftaran terlebih dahulu");
-        redirect("https://pamongdesa.kemendagri.go.id/");
+        setInner("content","Silahkan lakukan chat ke bot helpdesk pemilihan operator");
+        redirect("https://wa.me/6285157979759?text=bantuan+operator");
     }
     console.log(result);
 }
