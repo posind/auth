@@ -15,7 +15,7 @@ function responseFunction(result){
         redirect("/pdboard");
     }else{
         setInner("content","Silahkan lakukan chat ke bot helpdesk pemilihan operator");
-        redirect("https://wa.me/6285157979759?text=bantuan+operator");
+        redirect("https://wa.me/62895340003000?text=bantuan+operator");
     }
     console.log(result);
 }
