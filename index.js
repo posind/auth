@@ -7,15 +7,15 @@ if (getCookie("login")===""){
     redirect("/");
 }
 
-getJSON("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/user","login",getCookie("login"),responseFunction)
+getJSON("https://asia-southeast2-civil-epigram-429004-t8.cloudfunctions.net/pibackend/data/user","login",getCookie("login"),responseFunction)
 
 function responseFunction(result){
     if (result.status === 200){
         setInner("content","Selamat datang "+result.data.name);
-        redirect("/pdboard");
+        redirect("/dashboard");
     }else{
         setInner("content","Silahkan lakukan chat ke bot helpdesk pemilihan operator");
-        redirect("https://wa.me/62895340003000?text=bantuan+operator");
+        redirect("https://wa.me/62895800006000?text=bantuan+operator");
     }
     console.log(result);
 }
