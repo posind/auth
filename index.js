@@ -12,10 +12,10 @@ getJSON("https://asia-southeast2-civil-epigram-429004-t8.cloudfunctions.net/piba
 function responseFunction(result){
     if (result.status === 200){
         setInner("content","Selamat datang "+result.data.name);
-        redirect("/dashboard");
+        //redirect("/dashboard");
     }else{
         setInner("content","Silahkan lakukan chat ke bot helpdesk pemilihan operator");
-        redirect("https://wa.me/62895800006000?text=bantuan+operator");
+        //redirect("https://wa.me/62895800006000?text=bantuan+operator");
     }
     console.log(result);
 }
